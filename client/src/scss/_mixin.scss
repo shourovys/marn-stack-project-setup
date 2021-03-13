@@ -1,0 +1,28 @@
+//break points
+
+// 640px 1024px 1440px
+$breakPoints-up: (
+  "medium": "64rem",
+  "large": "102.4rem",
+  "x-large": "144rem",
+);
+// 374px 639px 1023px
+$breakPoints-down: (
+  "small": "37.4rem",
+  "medium": "63.9rem",
+  "large": "102.3rem",
+);
+
+//for mobile to desktop
+@mixin breakPoint-up($size) {
+  @media (min-width: map-get($breakPoints-up, $size )) {
+    @content;
+  }
+}
+
+//for desktop to mobile
+@mixin breakPoint-down($size) {
+  @media (max-width: map-get($breakPoints-down, $size )) {
+    @content;
+  }
+}

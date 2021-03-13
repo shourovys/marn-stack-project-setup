@@ -1,0 +1,11 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 70vh;
+  gap: 1rem;
+}
+.form__input {
+  min-width: 18rem;
+}
